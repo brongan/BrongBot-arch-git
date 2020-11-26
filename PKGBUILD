@@ -7,7 +7,7 @@ pkgdesc="A bot to control my AWS account"
 arch=("any")
 license=("MIT")
 depends=("python3")
-makedepends=("git")
+makedepends=("git" "python-setuptools")
 source=("$pkgname::git+https://github.com/HBBrennan/$pkgname.git")
 sha256sums=('SKIP')
 
