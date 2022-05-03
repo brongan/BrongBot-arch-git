@@ -27,6 +27,7 @@ package() {
     python setup.py install --root="$pkgdir" --optimize=1 --skip-build
     install -Dm644 service/brong_botd.service -t "$pkgdir/usr/lib/systemd/system"
     install -Dm644 LICENSE -t "$pkgdir/usr/share/licenses/$pkgname"
-    install -Dm600 service/aws_environment.default -T "$pkgdir/etc/sysconfig/brong_botd/aws_environment"
+    install -DM644 README.md -t "$pkgdir/usr/share/$pkgname"
+    install -Dm600 service/aws_environment.default -T "$pkgdir/etc/sysconfig/brong_botd/aws_environment.example"
 }
 
